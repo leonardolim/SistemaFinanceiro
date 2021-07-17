@@ -1,0 +1,173 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<html>
+<head>
+    <style>
+        .despesa, .categoria {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            height: 250px;
+            width: 300px;
+            padding: initial;
+            border: solid 1px #808080;
+            background: #f9f9f9;
+            display: none;
+        }
+
+        button {
+            height: auto;
+            width: auto;
+            border: solid 1px #808080;
+            border-radius: 5px;
+            background: #e5e5e5;
+            font-size: small;
+            color: black;
+            padding: 5px;
+            text-align: center;
+            float: inline-start;
+        }
+
+        #despesaa {
+            float: left;
+            margin: 5px;
+            margin-top: 35px;
+        }
+
+        #valor {
+            float:none;
+            padding-inline: 10px;
+            margin: 5px;
+        }
+
+        #catg {
+            float: left;
+            margin: 5px;
+        }
+
+        #data {
+            float: left;
+            clear: both;
+            margin: 5px;
+            margin-top: 8px;
+        }
+
+        #parcelas {
+            float: none;
+            margin: 5px;
+        }
+
+        .input-despesa {
+            width: 200px;
+        }
+
+        div {
+            border-radius: 5px;
+        }
+
+        #wr-memory {
+            display: flex;
+            margin: 15px 50px;
+            justify-content: space-around;
+        }
+
+        #wr-memory-2 {
+            display: flex;
+            margin: 15px 40px;
+            justify-content: space-around;
+        }
+
+        #description, #name {
+            width: 200px;
+            margin: 5px 50px 15px 50px;
+        }
+
+        .form-create-label {
+            display: block;
+            margin: 0px 50px;
+        }
+
+        #categoria__child {
+            margin: 30px 8px;
+        }
+
+        #header-category {
+            margin: 0px 95px;
+        }
+    </style>
+    <script type="text/javascript">
+        function Criar() {
+            document.getElementById('categoria').style.display = "block"
+        }
+        function Fechar() {
+            document.getElementById('categoria').style.display = "none"
+        }
+        function Registrar() {
+            document.getElementById('despesa').style.display = "block"
+        }
+        function RCancelar() {
+            document.getElementById('despesa').style.display = "none"
+        }
+        function EDespesa() {
+            document.getElementById('tabdespesa').style.display = "block"
+        }
+        function Voltar() {
+            document.getElementById('tabdespesa').style.display = "none"
+        }
+        function regra() {
+            if (getElementById('despesa').style.display == "block")
+                Registrar
+        }
+    </script>
+
+
+</head>
+<body>
+    <div id="categoria" class="categoria">
+        <h4 id="header-category">Criar Categoria</h4>
+        <section id="categoria__child">
+            <form action="https://localhost:44353/Home">
+                <label name="name" class="form-create-label">Nome</label>
+                <input type="text" name="name" id="name" />
+                <label name="description" class="form-create-label">Descrição</label>
+                <input type="text" name="description" id="description" />
+            </form>
+            <section id="wr-memory-2">
+                <button type="button" onclick="javascript: Fechar();">Fechar</button>
+                <button type="button" onclick="javascript: salvar();">Salvar</button>
+            </section>
+        </section>
+    </div>
+
+    <div id="despesa" class="despesa">
+        <h1 style="font-size:12px;text-align: center; ">Registro de Despesa</h1>
+        <section id="category_child">
+            
+            <input type="text" name="Descrição" id="despesaa" class="input-despesa" placeholder="Descrição" />
+            <input type="text" name="Valor" id="valor" class="input-despesa" placeholder="Valor da despesa"/>
+            <select name="Categoria" id="catg" class="input-despesa">
+                <option>Categorias</option>
+                <option value="javascript: categoria();">Transporte</option>
+                <option value="Besteira">besteira</option>
+            </select>
+            <input type="text" name="Data da dispesa" id="data" class="input-despesa" placeholder="Data da dispesa"/>
+            <input type="text" name="Parcelas" id="parcelas" class="input-despesa" placeholder="Parcelas"/>
+        </section> 
+        <section id="wr-memory">
+            <button id="cancel" type="button" onclick="javascript: RCancelar();">Cancelar</button>
+            <button id="salve" type="button" onclick="javascript: Registrar();">Salvar</button>
+        </section>
+
+
+    </div>
+
+    <button type="button" onclick="javascript: Criar();">Criar Categoria</button>
+    <button type="button" onclick="javascript: Registrar();">Registrar Despesa</button>
+    <button type="button" onclick="javascript: EDespesa();">Exibir Despesa</button>
+
+</body>
+</html>

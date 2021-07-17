@@ -1,0 +1,119 @@
+﻿@{
+    ViewData["Title"] = "Gastos";
+}
+<head>
+    <style type="text/css">
+
+        th, td {
+            border-radius: 1px;
+            margin: auto;
+            padding: .7em;
+            margin: 0;
+            text-align: center;
+        }
+
+        td, th {
+            border: 1px solid #000;
+            border-radius: 3px;
+        }
+
+        th {
+            background: #47597E;
+            color: white;
+        }
+
+        table {
+            width: 100%;
+            margin-bottom: .5em;
+            table-layout: fixed;
+            text-align: center;
+            border: 3px solid #e5e5e5;
+            border-radius: 6px;
+        }
+
+        #data-hour {
+            display: flex;
+            justify-content: center;
+        }
+
+        select {
+            border: 3px solid black;
+            border-radius: 2px;
+            width: 80px;
+            height: 30px;
+        }
+
+        #cabecalho {
+            border: 3px solid #e5e5e5;
+            border-bottom: 0px;
+            display: flex;
+            justify-content: center;
+            background: #293B5F;
+            border-radius: 6px;
+            color: white;
+        }
+    </style>
+
+
+</head>
+<div class="text-center">
+    <h1>Demonstrativo de Gastos</h1>
+</div>
+<section id="data-hour">
+    <select>
+        <option>Mês</option>
+        <option>01</option>
+        <option>02</option>
+        <option>03</option>
+        <option>04</option>
+        <option>05</option>
+        <option>06</option>
+        <option>07</option>
+        <option>08</option>
+        <option>09</option>
+        <option>10</option>
+        <option>11</option>
+        <option>12</option>
+    </select>
+    <select>
+        <option>Ano</option>
+        <option>2021</option>
+        <option>2022</option>
+        <option>2023</option>
+        <option>2024</option>
+        <option>2025</option>
+        <option>2026</option>
+        <option>2027</option>
+    </select>
+</section>
+<br>
+<br />
+<br />
+<br />
+
+<table class="text-center" border="1">
+    <div id="cabecalho">
+        <h2>Despesas Registradas</h2>
+    </div>
+    <theader>
+        <tr align="center">
+            <th align="center">Data</th>
+            <th align="left">Descrição </th>
+            <th align="center">Valor</th>
+            <th align="center">Categoria</th>
+            <th align="center">Parcelas</th>
+        </tr>
+    </theader>
+    <tbody>
+
+
+        <tr align="Right" width="25%">
+            <td align="right" font="serif">16/08/2021</td>
+            <td align="right" font="serif">Pão de batata na rua do joao</td>
+            <td align="right">R$ 2500,00</td>
+            <td align="right">Transporte</td>
+            <td align="right">12x</td>
+        </tr>
+    </tbody>
+
+</table>
